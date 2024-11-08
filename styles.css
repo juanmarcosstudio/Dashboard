@@ -54,23 +54,51 @@ body {
 
 /* Header */
 #header {
-    grid-column-start: 1;
     padding: 20px;
     display: grid;
+    grid-template-columns: auto 1fr;
     gap: 5px;
-    grid-row-start: 1;
-    align-items: center;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.greeting img.profile {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
 }
 
 .greeting h2 {
     font-size: 1.2em;
     font-weight: bold;
+    margin: 0;
+}
+
+.username {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.greeting p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666; 
 }
 
 .header-actions button {
-    margin-left: 10px;
+    margin: 5px;
     padding: 10px 20px;
     background-color: #007acc;
     color: #fff;
@@ -146,10 +174,4 @@ body {
     width: 20px; 
     height: 20px;
     margin-right: 10px;
-}
-
-.profile {
-    width: 20px; 
-    height: 20px;
-    margin-right: 5px;
 }
